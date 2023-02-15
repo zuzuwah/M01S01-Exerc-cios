@@ -1,0 +1,35 @@
+Console.WriteLine("Bom dia! Insira suas notas:");
+
+float nota1;
+
+Console.WriteLine("Nota 1");
+
+nota1 = float.Parse(Console.ReadLine ());
+
+float nota2;
+
+Console.WriteLine("Nota 2");
+
+nota2 = float.Parse(Console.ReadLine ());
+
+float nota3;
+
+Console.WriteLine("Nota 3");
+
+nota3 = float.Parse(Console.ReadLine ());
+
+float media;
+
+media = (nota1 + nota2 + nota3)/3;
+
+if (media >= 6) {
+Console.WriteLine ("Aluno aprovado com media " + media);
+}
+
+if (media >= 5 && media < 6) {
+    Console.WriteLine ("Aluno em recuperação com media " + media);
+}
+
+if (media < 5){
+    Console.WriteLine ("Aluno reprovado com media " + media);
+}

@@ -1,0 +1,19 @@
+Console.WriteLine ("Vamos calcular a área de um triângulo?");
+
+int lado;
+
+Console.WriteLine ("Insira o valor da base em cm:");
+
+lado = int.Parse(Console.ReadLine ());
+
+int altura;
+
+Console.WriteLine ("Insira o valor da altura em cm:");
+
+altura = int.Parse(Console.ReadLine ());
+
+int area;
+
+Console.WriteLine ("A área do triângulo é:");
+
+Console.WriteLine ((area = (lado * altura)/2) + " cm");

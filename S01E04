@@ -1,0 +1,27 @@
+Console.WriteLine ("Olá! Para calcular seu imposto, digite seu salário bruto atual, em R$:");
+
+float salario;
+
+salario = float.Parse(Console.ReadLine ());
+
+double imposto5 = salario * 0.05;
+
+double imposto10 = salario * 0.10;
+
+double imposto20 = salario * 0.20;
+
+if (salario <= 900){
+    Console.WriteLine ("Imposto a pagar: 0");
+}
+
+if (salario > 900 && salario <= 1500){
+  Console.WriteLine ("Imposto a pagar: " + imposto5);
+}
+
+if (salario > 1500 && salario <= 2500){
+   Console.WriteLine ("Imposto a pagar: " + imposto10);
+}
+
+if (salario > 2500){
+  Console.WriteLine ("Imposto a pagar: " + imposto20);
+}

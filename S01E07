@@ -1,0 +1,41 @@
+Console.WriteLine("Digite o nome do aluno:");
+string nome = Console.ReadLine();
+
+
+Console.WriteLine("Digite a quantidade de notas: ");
+int quantidadeNotas;
+while(!int.TryParse(Console.ReadLine(), out quantidadeNotas)){
+   Console.WriteLine("Numero Invalido, por favor entre novamente com a nota");
+}
+
+List<double> notas = new List<double>();
+
+for(int i = 0; i < quantidadeNotas; i++){
+  Console.WriteLine("Digite a " + (i +1) + " Nota:");
+  notas.Add(double.Parse(Console.ReadLine()));
+}
+
+double soma = 0;
+
+Console.WriteLine($"O Boletin de {nome}: ");
+foreach(var nota in notas){
+  Console.WriteLine(nota);
+  soma+= nota;
+  //soma = soma +nota;
+}
+
+double media = soma / quantidadeNotas;
+
+Console.WriteLine("A média é de : "+ media);
+
+if (media >= 6) {
+Console.WriteLine ("Aluno aprovado com media " + media);
+}
+
+if (media >= 5 && media < 6) {
+    Console.WriteLine ("Aluno em recuperação com media " + media);
+}
+
+if (media < 5){
+    Console.WriteLine ("Aluno reprovado com media " + media);
+}

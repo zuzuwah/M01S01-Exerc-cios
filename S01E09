@@ -12,10 +12,6 @@ if (opcao == "1") {
     Console.WriteLine ("Digite o valor a ser depositado (em R$): ");
     double valor = double.Parse(Console.ReadLine());
     transacao.Add(valor);
-    //Console.WriteLine("O valor depositado foi:");
-    // foreach(var valor in transacao){
-    //   Console.WriteLine("R$ " + valor);
-    // }
 }
 
 else if (opcao == "2") {

@@ -1,0 +1,37 @@
+
+string opcao;
+
+do{
+  Console.WriteLine("Bem vindo ao Banco Nacional Coqueiros, por favor selecione uma opção para continuar:");
+  Console.WriteLine("1. Adicionar Transação;");
+  Console.WriteLine("2. Consultar extrato;");
+  Console.WriteLine("3. Sair;");
+
+  opcao = Console.ReadLine();
+ 
+} while(!(opcao == "1" || opcao == "2" || opcao == "3"));
+
+
+List<double> transacao = new List<double>();
+
+if (opcao == "1") {
+    Console.WriteLine ("Digite o valor a ser depositado (em R$): ");
+    transacao.Add(double.Parse(Console.ReadLine()));
+    Console.WriteLine("O valor depositado foi:");
+    foreach(var valor in transacao){
+    Console.WriteLine("R$ " + valor);
+  }
+}
+
+
+if (opcao == "2") {
+    Console.WriteLine ("Seu Extrato (em R$): ");
+    foreach(var valor in transacao){
+    Console.WriteLine($"R$ " + valor);
+}
+}
+
+
+
+
+
